@@ -33,6 +33,7 @@ import BlockchainPattern from "@/components/blockchain-pattern"
 import SocialLinks from "@/components/social-links"
 import { milestones, ResearchTeam, stats, teamMembers } from "@/data"
 import JoinCommunityButton from "@/components/join-community-button"
+import VoiceAgent from "@/components/VoiceAgent"
 
 export default function AboutPage() {
 
@@ -66,6 +67,8 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
+      <VoiceAgent agentId={process.env.NEXT_PUBLIC_ELEVENLABS_AGENT_ID!} />
+
       <section className="relative overflow-hidden py-20 text-white min-h-[80vh] flex items-center">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">

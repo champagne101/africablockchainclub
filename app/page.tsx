@@ -17,6 +17,7 @@ import { FloatingNav } from "@/components/ui/FloatingNav";
 import { navItems } from "@/data";
 import Footer from "@/components/ui/footer";
 import Articles from "@/components/articles";
+import VoiceAgent from "@/components/VoiceAgent";
 
 
 export default function Home() {
@@ -29,7 +30,8 @@ export default function Home() {
       {/* <div className="absolute inset-0 z-10 pointer-events-none">
         <Cursor/>
       </div> */}
-      
+      <VoiceAgent agentId={process.env.NEXT_PUBLIC_ELEVENLABS_AGENT_ID!} />
+
       <main className="relative z-0 overflow-x-hidden" style={{ background: "#2B2B2B" }}>
         <section className="relative">
           <Hero />

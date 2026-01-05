@@ -26,6 +26,7 @@ import FadeIn from "@/components/animations/fade-in"
 import ScaleIn from "@/components/animations/scale-in"
 import StaggerContainer from "@/components/animations/stagger-container"
 import BlockchainPattern from "@/components/blockchain-pattern"
+import VoiceAgent from "@/components/VoiceAgent"
 
 type MediaItem = {
   id: string
@@ -187,6 +188,8 @@ export default function MediaPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
+      <VoiceAgent agentId={process.env.NEXT_PUBLIC_ELEVENLABS_AGENT_ID!} />
+
       <section className="relative overflow-hidden py-20 text-white min-h-[70vh] flex items-center">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
