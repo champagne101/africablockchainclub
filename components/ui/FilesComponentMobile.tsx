@@ -180,11 +180,14 @@ export default function ProjectsDrawer() {
                   </div>
 
                   {/* CTA */}
-                  <div className="flex justify-center items-center mt-4 pt-3 border-t border-gray-700/30">
-                    <button className="flex items-center text-sm bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full hover:from-purple-600 hover:to-blue-600 transition-all active:scale-95 cursor-pointer">
-                      <span className="font-medium">{project.message}</span>
-                      <FaLocationArrow className="ms-2" size={12} />
-                    </button>
+                  <div className="flex justify-center items-center mt-4">
+                    <a
+                      href={project.link}
+                      rel="noopener noreferrer"
+                      className="flex items-center text-sm text-purple border border-[#CBACF9] px-4 py-2 rounded-full hover:bg-[#CBACF9]/10 transition cursor-pointer">
+                      {project.message}
+                      <FaLocationArrow className="ms-3" color="#CBACF9" />
+                    </a>
                   </div>
                 </div>
               </div>
