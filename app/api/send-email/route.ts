@@ -8,10 +8,12 @@ export async function POST(request: NextRequest) {
 
     // Create a transporter using your email service
     const transporter = nodemailer.createTransport({
-      service: 'gmail', 
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT),
+      secure: true, // true for 465, false for 587
       auth: {
-        user: "sandilemsiwundla@gmail.com",
-        pass: "lsbogralahwvflkp", 
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
     });
 
@@ -73,9 +75,10 @@ export async function POST(request: NextRequest) {
 
     // Email options
     const mailOptions = {
-      from: `ABC Website <sandilemsiwundla@gmail.com>`,
-      to: 'sandilemsiwundla@gmail.com',
-      subject: `New ${formType} Collaboration Request - ABC Website`,
+      from: `"Africa's Blockchain Club" <info@africasblockchainclub.com>`,
+      to: process.env.MAIL_TO,
+      replyTo: formData.email || process.env.SMTP_USER,
+      subject: `New ${formType} Collaboration Request`,
       text: emailContent,
       html: htmlContent,
     };
