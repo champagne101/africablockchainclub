@@ -134,10 +134,13 @@ export default function ProjectsDrawer() {
 
                   {/* Bottom CTA */}
                   <div className="flex justify-center items-center mt-4">
-                    <p className="flex items-center text-sm text-purple border border-[#CBACF9] px-4 py-2 rounded-full hover:bg-[#CBACF9]/10 transition cursor-pointer">
+                    <a
+                      href={project.link}
+                      rel="noopener noreferrer"
+                      className="flex items-center text-sm text-purple border border-[#CBACF9] px-4 py-2 rounded-full hover:bg-[#CBACF9]/10 transition cursor-pointer">
                       {project.message}
                       <FaLocationArrow className="ms-3" color="#CBACF9" />
-                    </p>
+                    </a>
                   </div>
                 </div>
               );
@@ -210,10 +213,13 @@ export default function ProjectsDrawer() {
 
                   {/* Static Bottom Message */}
                   <div className="flex justify-center items-center mt-4">
-                    <p className="flex items-center lg:text-xl md:text-xs text-sm text-purple border border-[#CBACF9] px-4 py-1 rounded-full hover:bg-[#CBACF9]/10 transition cursor-pointer">
+                    <a
+                      href={project.link}
+                      rel="noopener noreferrer"
+                      className="flex items-center text-sm text-purple border border-[#CBACF9] px-4 py-2 rounded-full hover:bg-[#CBACF9]/10 transition cursor-pointer">
                       {project.message}
                       <FaLocationArrow className="ms-3" color="#CBACF9" />
-                    </p>
+                    </a>
                   </div>
                 </div>
               );
