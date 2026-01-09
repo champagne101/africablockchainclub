@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Pause, Play, Sparkles, Clock, BookOpen, MoveRight, Circle, ChevronUp, ChevronDown } from 'lucide-react';
 
@@ -13,7 +14,8 @@ const sampleArticles = [
     accentColor: '#7c3aed', 
     gradient: 'from-purple-500 via-violet-400 to-fuchsia-300',
     bgGradient: 'from-purple-900/20 via-violet-900/15 to-fuchsia-900/10',
-    readTime: '11 min read'
+    readTime: '11 min read',
+    link: 'https://medium.com/@africablockchainclub/pendle-finance-redefining-yield-in-defi-d02f9ea0492d'
   },
   {
     id: 2,
@@ -24,7 +26,8 @@ const sampleArticles = [
     accentColor: '#f59e0b', 
     gradient: 'from-amber-500 via-orange-400 to-yellow-300',
     bgGradient: 'from-amber-900/20 via-orange-900/15 to-yellow-900/10',
-    readTime: '9 min read'
+    readTime: '9 min read',
+    link: 'https://medium.com/@africablockchainclub/kaito-ai-turning-crypto-knowledge-into-earnings-493dc8cd1ba0'
   },
    {
     id: 3,
@@ -35,7 +38,8 @@ const sampleArticles = [
     accentColor: '#ef4444',
     gradient: 'from-red-500 via-orange-400 to-rose-300',
     bgGradient: 'from-red-900/25 via-orange-900/15 to-rose-900/10',
-    readTime: '6 min read'
+    readTime: '6 min read',
+    link: 'https://medium.com/@africablockchainclub/the-breach-that-rocked-the-crypto-world-bybits-1-5-billion-heist-9a1b0d50ebd3'
   },
   {
     id: 4,
@@ -46,7 +50,8 @@ const sampleArticles = [
     accentColor: '#10b981', 
     gradient: 'from-emerald-500 via-green-400 to-lime-300',
     bgGradient: 'from-emerald-900/20 via-green-900/15 to-lime-900/10',
-    readTime: '9 min read'
+    readTime: '9 min read',
+    link: 'https://medium.com/@africablockchainclub/unlocking-value-in-web3-gaming-e92401d553ff'
   },
   {
     id: 5,
@@ -57,7 +62,8 @@ const sampleArticles = [
     accentColor: '#1e40af', 
     gradient: 'from-blue-600 via-indigo-500 to-sky-400',
     bgGradient: 'from-blue-900/25 via-indigo-900/15 to-sky-900/10',
-    readTime: '8 min read'
+    readTime: '8 min read',
+    link: 'https://medium.com/@africablockchainclub/cex-or-dex-the-ftx-collapse-disruption-f20a863f416a'
   }
  
 ];
@@ -405,12 +411,14 @@ const truncateWords = (text, maxWords) => {
                           </div>
                           
                           {/* Action Button */}
-                          <button className="group relative w-full md:w-auto flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] overflow-hidden">
+                          <Link 
+                            href={currentArticle.link}
+                            className="group relative w-full md:w-auto flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            <span className="relative z-10">Explore Full Analysis</span>
+                            <span className="relative z-10">Read Full Article</span>
                             <MoveRight size={20} className="relative z-10 group-hover:translate-x-2 transition-transform duration-300" />
                             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-white/10 to-blue-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-                          </button>
+                          </Link>
                         </div>
                       </div>
                     </div>
