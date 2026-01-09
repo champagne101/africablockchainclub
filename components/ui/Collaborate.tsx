@@ -194,7 +194,7 @@ const Collaborate: React.FC = () => {
                         {
                           icon: <Mail className="h-5 w-5 sm:h-6 sm:w-6 text-white" />,
                           title: "Email",
-                          description: "africablockchainclub@gmail.com",
+                          description: "info@africasblockchainclub.com",
                         },
                         {
                           icon: <Phone className="h-5 w-5 sm:h-6 sm:w-6 text-white" />,

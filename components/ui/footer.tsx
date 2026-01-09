@@ -195,7 +195,7 @@ const Footer = () => {
                   href="mailto:africablockchainclub@gmail.com"
                   className="text-amber-500 hover:underline transition-all duration-200 cursor-pointer"
                 >
-                  africablockchainclub@gmail.com
+                  info@africasblockchainclub.com
                 </Link>
               </div>
             </SlideIn>
