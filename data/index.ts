@@ -284,7 +284,7 @@ export const milestones = [
   {
     year: "2024",
     title: "100+ Members",
-    description: "Reached 1000+ active community members across Africa",
+    description: "Reached 100+ active community members across Africa",
   },
   {
     year: "2024",

@@ -272,15 +272,15 @@ export default function MediaPage() {
                   <div className="text-sm text-neutral-300">Videos</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-amber-400">100+</div>
+                  <div className="text-2xl font-bold text-amber-400">7+</div>
                   <div className="text-sm text-neutral-300">Articles</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-amber-400">500K+</div>
+                  <div className="text-2xl font-bold text-amber-400">500+</div>
                   <div className="text-sm text-neutral-300">Views</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-amber-400">25K+</div>
+                  <div className="text-2xl font-bold text-amber-400">100+</div>
                   <div className="text-sm text-neutral-300">Readers</div>
                 </div>
               </div>
