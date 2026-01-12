@@ -606,7 +606,7 @@ export default function AboutPage() {
                       <MapPin className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold">Headquarters</h4>
+                      <h4 className="font-semibold">Location</h4>
                       <p className="text-white">Johannesburg, South Africa</p>
                     </div>
                   </div>
@@ -617,7 +617,7 @@ export default function AboutPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold">Email</h4>
-                      <p className="text-white">africablockchainclub@gmail.com</p>
+                      <p className="text-white">info@africablockchainclub.com</p>
                     </div>
                   </div>
 
@@ -627,7 +627,7 @@ export default function AboutPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold">Phone</h4>
-                      <p className="text-white">+27 11 123 4567</p>
+                      <p className="text-white">+27 00 000 0000</p>
                     </div>
                   </div>
 
