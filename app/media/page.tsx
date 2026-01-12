@@ -9,7 +9,6 @@ import { Badge } from "@/components/ui/badge"
 import {
   Play,
   ExternalLink,
-  Calendar,
   Clock,
   Eye,
   ThumbsUp,
@@ -17,9 +16,7 @@ import {
   Video,
   FileText,
   Search,
-  Filter,
   Youtube,
-  Users,
   Bell,
 } from "lucide-react"
 import FadeIn from "@/components/animations/fade-in"
@@ -27,30 +24,15 @@ import ScaleIn from "@/components/animations/scale-in"
 import StaggerContainer from "@/components/animations/stagger-container"
 import BlockchainPattern from "@/components/blockchain-pattern"
 import VoiceAgent from "@/components/VoiceAgent"
+import {MediaItem} from "@/data/index"
 
-type MediaItem = {
-  id: string
-  title: string
-  description: string
-  thumbnail: string
-  url: string
-  publishedAt: string
-  duration?: string
-  views?: string
-  likes?: string
-  category: string
-  tags: string[]
-  type: "youtube" | "medium"
-  author?: string
-  readTime?: string
-}
 
 export default function MediaPage() {
   const [activeFilter, setActiveFilter] = useState<"all" | "youtube" | "medium">("all")
   const [searchTerm, setSearchTerm] = useState("")
 
   const mediaItems: MediaItem[] = [
-    // YouTube Videos
+    
     {
       id: "yt-3",
       title: "Zero Knowledge Proofs Explained | ABC Online Class with Scroll | Episode 1 Part 1",
@@ -267,7 +249,7 @@ export default function MediaPage() {
               {/* Quick Stats */}
               <div className="mt-12 grid grid-cols-2 gap-8 md:grid-cols-4 max-w-2xl mx-auto">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-amber-400">50+</div>
+                  <div className="text-2xl font-bold text-amber-400">10+</div>
                   <div className="text-sm text-neutral-300">Videos</div>
                 </div>
                 <div className="text-center">
@@ -275,11 +257,11 @@ export default function MediaPage() {
                   <div className="text-sm text-neutral-300">Articles</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-amber-400">500+</div>
+                  <div className="text-2xl font-bold text-amber-400">300+</div>
                   <div className="text-sm text-neutral-300">Views</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-amber-400">100+</div>
+                  <div className="text-2xl font-bold text-amber-400">20+</div>
                   <div className="text-sm text-neutral-300">Readers</div>
                 </div>
               </div>
@@ -297,14 +279,12 @@ export default function MediaPage() {
         </div>
       </section>
 
-      {/* Stats Section - Removed since it's now in hero */}
-
       {/* Search and Filter Section */}
-      <section className="bg-gray-800 py-12">
+      <section className="bg-gradient-to-br from-neutral-900 via-amber-900/80 to-neutral-900 py-4">
         <div className="container mx-auto px-4">
           <FadeIn direction="up">
             <div className="mx-auto max-w-4xl">
-              <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                 <div className="relative flex-1 max-w-md">
                   <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-neutral-400" />
                   <input
@@ -401,7 +381,6 @@ export default function MediaPage() {
           )}
         </div>
       </section>
-
 
       {/* Stay COnnected */}
       <section className="bg-neutral-900 py-10 text-white">

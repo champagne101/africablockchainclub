@@ -820,3 +820,22 @@ export const forms: FormsData = {
       img: "/link.svg",
     },
   ];
+
+  export type MediaItem = {
+    id: string
+    title: string
+    description: string
+    thumbnail: string
+    url: string
+    publishedAt: string
+    duration?: string
+    views?: string
+    likes?: string
+    category: string
+    tags: string[]
+    type: "youtube" | "medium"
+    author?: string
+    readTime?: string
+  }
+
+
