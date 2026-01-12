@@ -101,13 +101,12 @@ export default function MediaPage() {
     },
     
     // Medium Articles
-
     {
       id: "medium-5",
       title: "The breach that rocked the crypto world: Bybit’s $1.5 Billion Heist",
       description:
         "Bybit fell victim to a sophisticated cyberattack that resulted in the theft of over 400,000 ETH — valued at nearly $1.5 billion at the time -unraveling critical questions about security in the DeFi space.",
-      thumbnail: "/media/Articles/ByBit.jpg",
+      thumbnail: "/Articles/ByBit.jpg",
       url: "https://medium.com/@africablockchainclub/the-breach-that-rocked-the-crypto-world-bybits-1-5-billion-heist-9a1b0d50ebd3",
       publishedAt: "2025-04-24",
       category: "Exchanges",
@@ -121,7 +120,7 @@ export default function MediaPage() {
       title: "CEX or DEX? The FTX collapse disruption!",
       description:
         "Exploring The shocking downfall of a crypto trading platform called FTX Trading Ltd, amidst allegations of insider trading and fraud, exposed the vulnerabilities such as lack of transparency, and misuse of customer funds in centralised exchanges (CEXs).",
-      thumbnail: "/media/Articles/CEX.jpg",
+      thumbnail: "/Articles/CEX.jpg",
       url: "https://medium.com/@africablockchainclub/cex-or-dex-the-ftx-collapse-disruption-f20a863f416a",
       publishedAt: "2024-08-01",
       category: "Exchanges",
@@ -135,7 +134,7 @@ export default function MediaPage() {
       title: "Unlocking Value in Web3 Gaming",
       description:
       "The gaming world is entering an exciting new phase with the rise of Web3 technologies, especially through GameFi — a mix of online gaming and decentralised finance (DeFi). ",
-      thumbnail: "/media/Articles/gaming.jpg",
+      thumbnail: "/Articles/gaming.jpg",
       url: "https://medium.com/@africablockchainclub/unlocking-value-in-web3-gaming-e92401d553ff",
       publishedAt: "2024-11-24",
       category: "GamiFi",

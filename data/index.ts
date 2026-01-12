@@ -23,6 +23,17 @@
       detailsUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7396815118640005120",
     },
     {
+      id: "Co-working Space",
+      title: "Co-Working Space",
+      description: "Linum Labs, TDME, and Africa's Blockchain Club have joined forces to create an exclusive, invite-only co-working hub designed for the Web3 ecosystem in Johannesburg.This is a space where builders, researchers, developers, traders, and ecosystem pioneers can collaborate, create, and shape the future of Africa's Web3.",
+      image: "/Events/coworking.jpg",
+      date: "Oct 24, 2025",
+      location: "TDMarkets Offices Morningside, Johannesburg",
+      type: "past",
+      registrationUrl: "",
+      detailsUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7388234840459960320",
+    },
+    {
       id: "Party Event",
       title: "5th Global Pizza Party 2025",
       description: "In celebration of Bitcoin Pizza Day, join us and thousands around the world as PizzaDAO throws its 5th Global Pizza Party – and yes, it's as legendary as it sounds!",
