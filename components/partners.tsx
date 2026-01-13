@@ -147,18 +147,19 @@ export default function PartnersSection() {
           <div className="mb-6">
             <h3 className="mb-8 text-center font-mono text-2xl font-bold">Featured Partnerships</h3>
             <div className="relative">
-              <div className="flex overflow-x-auto justify-center items-center text-center gap-6 pb-2 ">
+              {/* Desktop: Horizontal Scroll */}
+              <div className="hidden md:flex overflow-x-auto justify-center items-center text-center gap-6 pb-2">
                 {featuredPartners.map((partner, index) => (
                   <ScaleIn key={partner.id} delay={index * 100}>
                     <Card className="min-w-[350px] group hover:shadow-2xl transition-all duration-500 border-2 hover:border-amber-500/30 bg-gradient-to-br from-black to-amber-50/30">
                       <CardContent className="p-8">
                         <div className="flex items-start justify-between mb-4">
-                          <div className="relative h-40 w-40 mx-auto overflow-hidden rounded-lg bg-gray shadow-sm border">
+                          <div className="relative h-40 w-40 mx-auto overflow-hidden rounded-lg bg-gray shadow-sm">
                             <Image
                               src={partner.logo || "/placeholder.svg"}
                               alt={partner.name}
-                              width={300}
-                              height={100}
+                              width={160}
+                              height={160}
                               className="object-contain p-2 group-hover:scale-110 transition-transform duration-300"
                             />
                           </div>
@@ -168,7 +169,33 @@ export default function PartnersSection() {
                           {partner.name}
                         </h4>
                         <p className="text-sm text-amber-600 font-medium">{partner.partnership}</p>
-                        
+
+                      </CardContent>
+                    </Card>
+                  </ScaleIn>
+                ))}
+              </div>
+
+              {/* Mobile: Vertical Stack */}
+              <div className="md:hidden flex flex-col gap-4">
+                {featuredPartners.map((partner, index) => (
+                  <ScaleIn key={partner.id} delay={index * 100}>
+                    <Card className="group hover:shadow-2xl transition-all duration-500 border-1 hover:border-amber-500/30 bg-amber">
+                      <CardContent className="p-4">
+                        <div className="flex flex-col items-center text-center">
+                          <div className="relative h-24 w-24 mb-4 overflow-hidden rounded-lg bg-gray shadow-sm">
+                            <Image
+                              src={partner.logo || "/placeholder.svg"}
+                              alt={partner.name}
+                              fill
+                              className="object-contain group-hover:scale-110 transition-transform duration-300"
+                            />
+                          </div>
+                          <h4 className="mb-2 font-bold text-lg group-hover:text-amber-600 transition-colors">
+                            {partner.name}
+                          </h4>
+                          <p className="text-sm text-amber-600 font-medium">{partner.partnership}</p>
+                        </div>
                       </CardContent>
                     </Card>
                   </ScaleIn>
