@@ -58,7 +58,8 @@ export const FloatingNav = ({
       {/* ========== NAVBAR ========== */}
       <nav
         className={cn(
-          "fixed z-[5000] w-full transition-all duration-500",
+          "fixed w-full transition-all duration-500",
+          isMobileMenuOpen ? "z-[6000]" : "z-[5000]",
           scrolled
             ? "top-4 mx-auto w-[95%] md:w-fit rounded-xl shadow-2xl border border-white/30 backdrop-blur-xl bg-black/70"
             : "top-0 border-b border-white/20 bg-black/40",
@@ -72,7 +73,7 @@ export const FloatingNav = ({
         <div
           className={cn(
             "flex items-center w-full px-4 py-3 md:px-8 md:py-2",
-            scrolled ? "justify-center" : "justify-between md:justify-end"
+            scrolled ? "md:justify-center justify-between" : "justify-between md:justify-end"
           )}
         >
           {!scrolled && (
@@ -110,6 +111,18 @@ export const FloatingNav = ({
               />
             )}
           </div>
+
+          {scrolled && (
+            <Link href="/" className="flex items-center md:hidden">
+              <Image
+                src="/About/ABC_HD_White.png"
+                alt="ABC Logo"
+                width={35}
+                height={30}
+                priority
+              />
+            </Link>
+          )}
 
           {/* Mobile toggle */}
           <button
@@ -154,7 +167,7 @@ export const FloatingNav = ({
               key={idx}
               href={item.link}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="w-full max-w-xs px-6 py-4 text-xl font-semibold rounded-2xl border border-white/20 text-white hover:bg-white/10 backdrop-blur-md transition-all"
+              className="w-full max-w-xs px-6 py-4 text-xl font-semibold rounded-2xl border border-white/20 text-white hover:bg-white/10 backdrop-blur-md transition-all text-center"
             >
               {item.icon && <span className="mr-3">{item.icon}</span>}
               {item.name}
