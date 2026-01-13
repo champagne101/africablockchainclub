@@ -22,6 +22,11 @@ export const metadata: Metadata = {
   description: "Building Africas Blockchain Future Join our community of passionate developers and innovators shaping the decentralized web across Africa.",
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,14 +34,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-       <FloatingNav navItems={navItems} />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <FloatingNav navItems={navItems} />
         <PageLoader />
         {children}
+        <Footer />
       </body>
-       <Footer />
     </html>
   );
 }

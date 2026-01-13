@@ -68,118 +68,142 @@ export default function UpcomingEvents() {
         </div>
 
         <TabsContent value="all" className="mt-8">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {eventsToShow.map((event) => (
-              <EventCard key={event.id} event={event} />
-            ))}
-          </div>
-          {hasMoreEvents && (
-            <div className="mt-8 flex justify-center">
-              <Button
-                variant="outline"
-                className="border-amber-500 text-amber-500 hover:bg-amber-500/10"
-                onClick={() => setShowAll(!showAll)}
-              >
-                {showAll ? (
-                  <>
-                    <ChevronUp className="mr-2 h-4 w-4" />
-                    Show Less
-                  </>
-                ) : (
-                  <>
-                    <ChevronDown className="mr-2 h-4 w-4" />
-                    Show All 
-                  </>
-                )}
-              </Button>
-            </div>
+          {filteredEvents.length === 0 ? (
+            <p className="text-center text-neutral-300">No events available.</p>
+          ) : (
+            <>
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {eventsToShow.map((event) => (
+                  <EventCard key={event.id} event={event} />
+                ))}
+              </div>
+              {hasMoreEvents && (
+                <div className="mt-8 flex justify-center">
+                  <Button
+                    variant="outline"
+                    className="border-amber-500 text-amber-500 hover:bg-amber-500/10"
+                    onClick={() => setShowAll(!showAll)}
+                  >
+                    {showAll ? (
+                      <>
+                        <ChevronUp className="mr-2 h-4 w-4" />
+                        Show Less
+                      </>
+                    ) : (
+                      <>
+                        <ChevronDown className="mr-2 h-4 w-4" />
+                        Show All
+                      </>
+                    )}
+                  </Button>
+                </div>
+              )}
+            </>
           )}
         </TabsContent>
 
         <TabsContent value="upcoming" className="mt-8">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {eventsToShow.map((event) => (
-              <EventCard key={event.id} event={event} />
-            ))}
-          </div>
-          {hasMoreEvents && (
-            <div className="mt-8 flex justify-center">
-              <Button
-                variant="outline"
-                className="border-amber-500 text-amber-500 hover:bg-amber-500/10"
-                onClick={() => setShowAll(!showAll)}
-              >
-                {showAll ? (
-                  <>
-                    <ChevronUp className="mr-2 h-4 w-4" />
-                    Show Less
-                  </>
-                ) : (
-                  <>
-                    <ChevronDown className="mr-2 h-4 w-4" />
-                    Show More ({filteredEvents.length - 3} more)
-                  </>
-                )}
-              </Button>
-            </div>
+          {filteredEvents.length === 0 ? (
+            <p className="text-center text-neutral-300">No upcoming events.</p>
+          ) : (
+            <>
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {eventsToShow.map((event) => (
+                  <EventCard key={event.id} event={event} />
+                ))}
+              </div>
+              {hasMoreEvents && (
+                <div className="mt-8 flex justify-center">
+                  <Button
+                    variant="outline"
+                    className="border-amber-500 text-amber-500 hover:bg-amber-500/10"
+                    onClick={() => setShowAll(!showAll)}
+                  >
+                    {showAll ? (
+                      <>
+                        <ChevronUp className="mr-2 h-4 w-4" />
+                        Show Less
+                      </>
+                    ) : (
+                      <>
+                        <ChevronDown className="mr-2 h-4 w-4" />
+                        Show More ({filteredEvents.length - 3} more)
+                      </>
+                    )}
+                  </Button>
+                </div>
+              )}
+            </>
           )}
         </TabsContent>
 
         <TabsContent value="ongoing" className="mt-8">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {eventsToShow.map((event) => (
-              <EventCard key={event.id} event={event} />
-            ))}
-          </div>
-          {hasMoreEvents && (
-            <div className="mt-8 flex justify-center">
-              <Button
-                variant="outline"
-                className="border-amber-500 text-amber-500 hover:bg-amber-500/10"
-                onClick={() => setShowAll(!showAll)}
-              >
-                {showAll ? (
-                  <>
-                    <ChevronUp className="mr-2 h-4 w-4" />
-                    Show Less
-                  </>
-                ) : (
-                  <>
-                    <ChevronDown className="mr-2 h-4 w-4" />
-                    Show More ({filteredEvents.length - 3} more)
-                  </>
-                )}
-              </Button>
-            </div>
+          {filteredEvents.length === 0 ? (
+            <p className="text-center text-neutral-300">No ongoing events.</p>
+          ) : (
+            <>
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {eventsToShow.map((event) => (
+                  <EventCard key={event.id} event={event} />
+                ))}
+              </div>
+              {hasMoreEvents && (
+                <div className="mt-8 flex justify-center">
+                  <Button
+                    variant="outline"
+                    className="border-amber-500 text-amber-500 hover:bg-amber-500/10"
+                    onClick={() => setShowAll(!showAll)}
+                  >
+                    {showAll ? (
+                      <>
+                        <ChevronUp className="mr-2 h-4 w-4" />
+                        Show Less
+                      </>
+                    ) : (
+                      <>
+                        <ChevronDown className="mr-2 h-4 w-4" />
+                        Show More ({filteredEvents.length - 3} more)
+                      </>
+                    )}
+                  </Button>
+                </div>
+              )}
+            </>
           )}
         </TabsContent>
 
         <TabsContent value="past" className="mt-8">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {eventsToShow.map((event) => (
-              <EventCard key={event.id} event={event} />
-            ))}
-          </div>
-          {hasMoreEvents && (
-            <div className="mt-8 flex justify-center">
-              <Button
-                variant="outline"
-                className="border-amber-500 text-amber-500 hover:bg-amber-500/10"
-                onClick={() => setShowAll(!showAll)}
-              >
-                {showAll ? (
-                  <>
-                    <ChevronUp className="mr-2 h-4 w-4" />
-                    Show Less
-                  </>
-                ) : (
-                  <>
-                    <ChevronDown className="mr-2 h-4 w-4" />
-                    Show More ({filteredEvents.length - 3} more)
-                  </>
-                )}
-              </Button>
-            </div>
+          {filteredEvents.length === 0 ? (
+            <p className="text-center text-neutral-300">No past events.</p>
+          ) : (
+            <>
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {eventsToShow.map((event) => (
+                  <EventCard key={event.id} event={event} />
+                ))}
+              </div>
+              {hasMoreEvents && (
+                <div className="mt-8 flex justify-center">
+                  <Button
+                    variant="outline"
+                    className="border-amber-500 text-amber-500 hover:bg-amber-500/10"
+                    onClick={() => setShowAll(!showAll)}
+                  >
+                    {showAll ? (
+                      <>
+                        <ChevronUp className="mr-2 h-4 w-4" />
+                        Show Less
+                      </>
+                    ) : (
+                      <>
+                        <ChevronDown className="mr-2 h-4 w-4" />
+                        Show More ({filteredEvents.length - 3} more)
+                      </>
+                    )}
+                  </Button>
+                </div>
+              )}
+            </>
           )}
         </TabsContent>
       </Tabs>
