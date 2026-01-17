@@ -37,7 +37,7 @@ export default function PartnersSection() {
       category: "universities",
       description: "Leading research collaboration on blockchain applications in African contexts",
       partnership: "Education Partner",
-      website: "https://uct.ac.za",
+      website: "https://wethinkcode.co.za",
       featured: true,
       tags: ["Research", "Education", "Innovation"],
     },
@@ -48,23 +48,23 @@ export default function PartnersSection() {
       category: "universities",
       description: "West African blockchain research hub and talent development center",
       partnership: "Education Partner",
-      website: "https://unilag.edu.ng",
+      website: "https://www.uj.ac.za/",
       featured: true,
       
       tags: ["West Africa", "Talent", "Hub"],
     },
-    // {
-    //     id: "Biptap",
-    //     name: "Biptap",
-    //     logo: "/partners/biptap.png",
-    //     category: "universities",
-    //     description: "West African blockchain research hub and talent development center",
-    //     partnership: "DeFi",
-    //     website: "https://unilag.edu.ng",
-    //     featured: true,
+    {
+        id: "KotaniPay",
+        name: "KotaniPay",
+        logo: "/partners/Kotani-Pay 1.png",
+        category: "universities",
+        description: "West African blockchain research hub and talent development center",
+        partnership: "on-ramp/off-ramp",
+        website: "https://kotanipay.com",
+        featured: true,
         
-    //     tags: ["West Africa", "Talent", "Hub"],
-    //   },
+        tags: ["Crypto", "API", "Hub"],
+      },
 
     {
       id: "scroll",
@@ -148,19 +148,20 @@ export default function PartnersSection() {
             <h3 className="mb-8 text-center font-mono text-2xl font-bold">Featured Partnerships</h3>
             <div className="relative">
               {/* Desktop: Horizontal Scroll */}
-              <div className="hidden md:flex overflow-x-auto justify-center items-center text-center gap-6 pb-2">
-                {featuredPartners.map((partner, index) => (
-                  <ScaleIn key={partner.id} delay={index * 100}>
+              <div className="hidden md:block overflow-hidden">
+                <div className="flex gap-6 animate-partners-scroll hover:[animation-play-state:paused] w-max">
+                {[...featuredPartners, ...featuredPartners].map((partner, index) => (
+                  <ScaleIn key={`${partner.id}-${index}`} delay={index * 50}>
                     <Card className="min-w-[350px] group hover:shadow-2xl transition-all duration-500 border-2 hover:border-amber-500/30 bg-gradient-to-br from-black to-amber-50/30">
                       <CardContent className="p-8">
-                        <div className="flex items-start justify-between mb-4">
+                        <div className="flex justify-center mb-4">
                           <div className="relative h-40 w-40 mx-auto overflow-hidden rounded-lg bg-gray shadow-sm">
                             <Image
                               src={partner.logo || "/placeholder.svg"}
                               alt={partner.name}
                               width={160}
-                              height={160}
-                              className="object-contain p-2 group-hover:scale-110 transition-transform duration-300"
+                              height={180}
+                              className="object-contain  p-2 group-hover:scale-110 transition-transform duration-300"
                             />
                           </div>
                         </div>
@@ -174,6 +175,7 @@ export default function PartnersSection() {
                     </Card>
                   </ScaleIn>
                 ))}
+              </div>
               </div>
 
               {/* Mobile: Vertical Stack */}

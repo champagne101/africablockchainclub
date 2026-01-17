@@ -8,19 +8,12 @@ import BlockchainBlocks from "./ui/blockchain-blocks";
 export default function Carousel() {
   return (
     <div className="relative w-full overflow-hidden min-h-[200px] md:min-h-[400px]">
-      <BlockchainBlocks className="h-full w-full" />
-      
-      {/* Giant Text Overlay - Mobile Optimized */}
-      <div className="absolute inset-0 z-10 flex items-center justify-center md:justify-start md:ml-[50px] pointer-events-none py-8 md:py-[10vh] md:pt-[43vh]">
-        <h2 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-text opacity-90 drop-shadow-lg leading-tight text-center md:text-left px-4">
-          {/* Add your text here */}
-        </h2>
-      </div>
-      
+      <BlockchainBlocks className="h-full w-full" />      
+
       <div className="absolute inset-0 bg-black/40 z-0 pointer-events-none" />
 
       <div className="relative perspective-[400px] md:perspective-[800px] z-0 py-8 md:py-0">
-        <div className="skewed-carousel animate-carousel-mobile md:animate-carousel">
+        <div className="skewed-carousel animate-carousel-mobile md:animate-carousel w-max">
           {[...teamImages, ...teamImages].map((img, i) => (
             <div
               key={i}
@@ -47,7 +40,7 @@ export default function Carousel() {
         }
         
         .animate-carousel-mobile {
-          animation: scroll-mobile 30s linear infinite;
+          animation: scroll-mobile 70s linear infinite;
         }
         
         .animate-carousel {
@@ -59,7 +52,7 @@ export default function Carousel() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(calc(-100% - 1rem));
+            transform: translateX(calc(-50% - 1rem));
           }
         }
         
@@ -68,7 +61,7 @@ export default function Carousel() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(calc(-100% - 1.5rem));
+            transform: translateX(calc(-50% - 1rem));
           }
         }
         

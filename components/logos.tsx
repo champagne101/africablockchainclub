@@ -43,20 +43,8 @@ export default function LogosRow() {
       <div className="scroller-container relative max-w-7xl mx-auto">
         <div className="logos-scroll flex gap-8 md:gap-12 py-4">
           {/* First set */}
-          {logos.map((logo, index) => (
+          {[...logos, ...logos].map((logo, index) => (
             <div key={`first-${index}`} className="flex-shrink-0 transition-transform duration-300">
-              <Image
-                src={logo.src}
-                alt={`Logo ${index}`}
-                width={50}
-                height={50}
-                className={`object-contain ${logo.invert ? "invert" : ""} w-12 h-12 md:w-14 md:h-14`}
-              />
-            </div>
-          ))}
-          {/* Duplicated set for seamless loop */}
-          {logos.map((logo, index) => (
-            <div key={`second-${index}`} className="flex-shrink-0 transition-transform duration-300" aria-hidden="true">
               <Image
                 src={logo.src}
                 alt={`Logo ${index}`}
@@ -85,7 +73,7 @@ export default function LogosRow() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(calc(-100% / 2));
+            transform: translateX(calc(-90% / 2));
           }
         }
 

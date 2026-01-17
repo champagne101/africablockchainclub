@@ -55,7 +55,7 @@ const sampleArticles = [
   },
   {
     id: 5,
-    image: '/Articles/sam4.jpg',
+    image: '/Articles/CEX.jpg',
     title: 'CEX or DEX? The FTX collapse disruption!',
     description: 'The shocking downfall of a crypto trading platform called FTX Trading Ltd, amidst allegations of insider trading and fraud, exposed the vulnerabilities such as lack of transparency, and misuse of customer funds in centralised exchanges (CEXs).',
     category: 'Crypto Crash',
